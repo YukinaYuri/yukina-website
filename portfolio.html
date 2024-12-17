@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body  {
+        background-image: url("images/ChisatoNishikigi.jpg");
+        background-color: #cccccc;
+        }
+    </style>
+    <style>
+        /* Image Slider Styles */
+        .slider {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 3rem auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            z-index: 10;
+        }
+
+        .slider-btn.prev {
+            left: 1rem;
+        }
+
+        .slider-btn.next {
+            right: 1rem;
+        }
+
+        .dots {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #0047ab;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/LOGO_UMS_putih.png" alt="Logo Icon" class="logo-icon" style="width: 180px; height: auto;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biodata.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="comments.html">Comments</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="text-content">
+            <h2>My Portfolio</h2>
+            <h3>Showcasing My Work</h3>
+            <p>Explore my past projects, creativity, and dedication to delivering quality work.</p>
+        </div>
+    </section>
+    <section class="slider">
+        <button class="slider-btn prev">&#10094;</button>
+        <div class="slides">
+            <img src="images/Data%20analysis.jpg" alt="Project 1">
+            <img src="images/editing.jpg" alt="Project 2">
+            <img src="images/Homepage%20Wallpaper.jpg" alt="Project 3">
+            <img src="images/ChisatoNishikigi.jpg" alt="Project 4">
+        </div>
+        <button class="slider-btn next">&#10095;</button>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Personal Website | Designed with ❤️</p>
+    </footer>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        const prevBtn = document.querySelector('.slider-btn.prev');
+        const nextBtn = document.querySelector('.slider-btn.next');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+
+        function updateSlider(index) {
+            slides.style.transform = `translateX(${-index * 100}%)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateSlider(currentIndex);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateSlider(currentIndex);
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateSlider(currentIndex);
+            });
+        });
+    </script>
+</body>
+</html>

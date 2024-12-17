@@ -1,0 +1,206 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/Homepage Wallpaper.jpg'); /* Replace with the correct image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional for parallax effect */
+    background-position: center;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #0047ab, #00aaff);
+    color: white;
+    padding: 1.5rem 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #00aaff;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+header .logo h1:hover {
+    transform: scale(1.1);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffdd00;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 3rem;
+    background-image: url('images/Homepage Wallpaper.jpg'); /* Replace with your hero image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    height: 70vh;
+    position: relative;
+}
+
+.hero .text-content {
+    max-width: 50%;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero h3 {
+    font-size: 2rem;
+    color: #ffdd00;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero .hero-image {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    max-width: 40%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.hero .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.hero .hero-image:hover img {
+    transform: scale(1.05);
+}
+
+.hero .price-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(0, 71, 171, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Features Section */
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Change to stretch to ensure all cards are the same height */
+    gap: 3rem;
+    padding: 4rem 6rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    margin-top: -50px;
+    z-index: 1;
+}
+
+.feature-card {
+    text-align: center;
+    padding: -2rem;
+    background-color: #f0f8ff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 250px;
+    flex: 50; /* Allow cards to grow and fill the space equally */
+    min-height: 300px; /* Set a minimum height for consistency */
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card img {
+    width: 125px;
+    height: 125px;
+    border-radius: 20%;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0047ab;
+}
+
+/* Footer */
+footer {
+    background-color: #0047ab;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-icons {
+    margin-top: 1rem;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ffdd00;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

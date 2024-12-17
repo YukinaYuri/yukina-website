@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/Homepage Wallpaper.jpg'); /* Replace with the correct image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional for parallax effect */
+    background-position: center;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #0047ab, #00aaff);
+    color: white;
+    padding: 1.5rem 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #00aaff;
+}
+
+/* Hero Section */
+.hero {
+    display ```css
+    : flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 5rem 3rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.hero .text-content {
+    text-align: center;
+    margin-bottom: 2rem; /* Space between text and slider */
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero h3 {
+    font-size: 2rem;
+    color: #ffdd00;
+}
+
+/* Slider Styles */
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 3rem auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.slider-btn.prev {
+    left: 1rem;
+}
+
+.slider-btn.next {
+    right: 1rem;
+}
+
+.dots {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #0047ab;
+}
+
+/* Footer */
+footer {
+    background-color: #0047ab;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    position: relative; /* Ensure footer stays at the bottom */
+    z-index: 1; /* Keep footer above other content */
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-icons {
+    margin-top: 1rem;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ffdd00;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
